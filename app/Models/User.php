@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name',
+        'username',
         'email',
         'password',
     ];
@@ -32,4 +32,12 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    /**
+     * Indicates that this table doesn't use timestamps fields.
+     * 
+     * @var bool
+     */
+    public $timestamps = false;
+
 }
