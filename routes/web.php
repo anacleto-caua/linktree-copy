@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TreeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+#trees
+Route::get('/trees', [TreeController::class, 'index'])->middleware(['auth'])->name('trees.index');
+
+Route::get('/trees/create', [TreeController::class, 'create'])->middleware(['auth'])->name('trees.create');
+
 
 require __DIR__.'/auth.php';
