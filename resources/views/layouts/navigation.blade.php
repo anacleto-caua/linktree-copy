@@ -13,9 +13,12 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('trees.index')" :active="request()->routeIs('trees.index')">
-                        {{ __('Dashboard') }}
+                        {{ __('Trees') }}
                     </x-nav-link>
                 </div>
+
+                
+
             </div>
 
             <!-- Settings Dropdown -->
