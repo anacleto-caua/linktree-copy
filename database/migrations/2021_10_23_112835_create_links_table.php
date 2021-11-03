@@ -17,7 +17,7 @@ class CreateLinksTable extends Migration
             $table->id();
             $table->string('name', 25);
             $table->string('link');
-            $table->foreignId('trees');
+            $table->foreignId('tree');
         });
     }
 
