@@ -16,21 +16,10 @@
             @csrf
 
             <!-- Username -->
-            <div>
-                <x-label for="username" :value="__('Username')" />
-
-                <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
-            </div>
+            <x-input atrib="username"/>
 
             <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-            </div>
+            <x-input atrib="password" type="password"/>
 
             <!-- Remember Me -->
             <div class="block mt-4">
@@ -47,9 +36,9 @@
                     </a>
                 @endif
 
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
+                <x-button.submit class="ml-3">
+                    Log In
+                </x-button.submit>
             </div>
         </form>
     </x-auth-card>
